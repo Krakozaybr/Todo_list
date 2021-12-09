@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Список дел</string>
+    <string name="email">E-mail</string>
+    <string name="password">Пароль</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="name">Имя</string>
+    <string name="repeat_password">Повтор пароля</string>
+    <string name="already_have_account">Уже есть аккаунт</string>
+    <string name="add_note">Добавить запись</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+    <string name="sign_in">Войти</string>
+    <string name="authentication_error">Ошибка аутентификации</string>
+    <string name="invalid_auth">Неправильный пароль или e-mail</string>
+    <string name="invalid_registration">Некоррекне вводные</string>
+    <string name="already_exists">Такой e-mail уже зарегистрирован</string>
+    <string name="change_note">Изменить запись</string>
+    <string name="update">Обновить</string>
+    <string name="delete_profile">Удалить профиль</string>
+    <string name="delete_note">Удалить запись</string>
+    <string name="is_public">Публичная запись</string>
+    <string name="sign_out">Выйти</string>
+    <string name="fish_name">Петр первый</string>
+</resources>

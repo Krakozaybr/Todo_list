@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TODO list</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="already_have_account">Already have account</string>
+    <string name="add_note">Add note</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="sign_in">Sign in</string>
+    <string name="authentication_error">Authentication error</string>
+    <string name="invalid_auth">Invalid password or email</string>
+    <string name="invalid_registration">Invalid inputs</string>
+    <string name="already_exists">Such email has already been registered</string>
+    <string name="change_note">Change note</string>
+    <string name="update">Update</string>
+    <string name="delete_profile">Delete profile</string>
+    <string name="delete_note">Delete note</string>
+    <string name="is_public">Public</string>
+    <string name="sign_out">Sign out</string>
+    <string name="fish_text" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</string>
+    <string name="fish_name">Petr Pervii</string>
+</resources>
