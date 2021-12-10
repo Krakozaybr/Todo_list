@@ -49,6 +49,10 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void addTextToInputs(){
+        binding.nameTWProfile.setText(user.getName());
+        if (!user.getImageSrc().equals("")){
+            binding.profileImageProfile.setImageURI(Uri.parse(user.getImageSrc()));
+        }
         binding.userNameInputProfile.setText(user.getName());
         binding.userPasswordInputProfile.setText(user.getPassword());
         binding.userEmailInputProfile.setText(user.getEmail());
@@ -69,6 +73,7 @@ public class ProfileActivity extends AppCompatActivity {
         } else {
             showUserExistsDialog();
         }
+        binding.nameTWProfile2.setText(user.getName());
     }
 
     private void showUserExistsDialog() {
