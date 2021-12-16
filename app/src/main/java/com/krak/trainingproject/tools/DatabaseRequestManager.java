@@ -38,6 +38,7 @@ public class DatabaseRequestManager {
         database.execSQL(CREATE_DB);
     }
 
+    // Это легаси метод. Он был написан еще до создания мира. Плохой он в общем. Не используйте его
     @Deprecated
     public boolean checkAuth(String email, String password){
         Cursor cursor = database.rawQuery(GET_USERS, null);
@@ -155,7 +156,7 @@ public class DatabaseRequestManager {
     public boolean existUser(String email) {
         Cursor cursor = database.rawQuery(GET_USERS, null);
         while(cursor.moveToNext()){
-            if (cursor.getString(0).equals(email)){
+            if (cursor.getString(0).equals(email) && !cursor.getString(0).equals(Session.getUser().getEmail())){
                 return true;
             }
         }

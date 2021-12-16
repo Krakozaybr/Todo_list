@@ -34,6 +34,7 @@ public class RegistrationActivity extends AppCompatActivity {
         binding.registerBtnReg.setOnClickListener(view -> register());
     }
 
+    // Берём данные из EditText и пытаемся зарегистрироваться
     private void register(){
         if (checkInputs()) {
             String email = binding.emailInputReg.getText().toString().trim();
@@ -53,21 +54,28 @@ public class RegistrationActivity extends AppCompatActivity {
         }
     }
 
+    // Идём в AuthActivity
     private void startAuth(){
         Intent intent = new Intent(this, AuthActivity.class);
         startActivity(intent);
     }
 
+    // Показываем сообщение пользователю об ошибке
     private void showMessage(String message){
         binding.regErrorMessageTW.setText(message);
         Log.i("AuthActivity", "Message '" + message + "' is shown");
     }
 
+    // Проверяет EditView на наличие текста + проверяет email
     private boolean checkInputs() {
         String email = binding.emailInputReg.getText().toString().trim();
         String password = binding.passwordInputReg.getText().toString().trim();
         String passwordRepeat = binding.repeatPasswordInputReg.getText().toString().trim();
         String name = binding.nameInputReg.getText().toString().trim();
+        // Страшное ".{3,}@.+\\..{2,}" означает, что email должен соответствовать виду
+        // Есть @
+        // До @ как минимум 3 символа
+        // После @ идёт ненулевое количество символов, точка и два или более символов
         return email.matches(".{3,}@.+\\..{2,}") &&
                 !password.equals("") &&
                 !passwordRepeat.equals("") &&

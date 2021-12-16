@@ -30,6 +30,7 @@ public class NewNoteActivity extends AppCompatActivity {
     DatabaseRequestManager databaseRequestManager;
     PreferencesManager preferencesManager;
     User user;
+    // Этот флаг отвечает за обновление существующей записи
     boolean isUpdate;
 
     @Override

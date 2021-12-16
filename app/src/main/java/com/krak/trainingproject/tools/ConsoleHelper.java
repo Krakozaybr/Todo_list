@@ -2,6 +2,8 @@ package com.krak.trainingproject.tools;
 
 import android.util.Log;
 
+
+// Чисто Debug класс
 public class ConsoleHelper {
 
     private static final String LOG_TAG = "ConsoleHelper";

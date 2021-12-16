@@ -25,7 +25,11 @@ public class StartActivity extends AppCompatActivity {
         LocalBroadcastManager.getInstance(this).registerReceiver(receiver, new IntentFilter(TIME_HAS_COME));
         startWaiting();
     }
+    // Комментарий далее - Deprecated не читайте его
+    // @Deprecated
+    // Получаем сообщение, что ВРЕМЯ ПРИШЛО И ПОРА ПОКАЗАТЬ СМЕРТНЫМ МОЩЬ ЭТОГО МИРА...
 
+    // После 1.5 секунды показа пользователю заставки идём в AuthActivity
     private BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -35,6 +39,7 @@ public class StartActivity extends AppCompatActivity {
         }
     };
 
+    // Ждем 1.5 секунды
     private void startWaiting() {
         new Thread(){
             @Override

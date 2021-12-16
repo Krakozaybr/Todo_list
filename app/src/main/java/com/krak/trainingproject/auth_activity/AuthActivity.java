@@ -98,6 +98,11 @@ public class AuthActivity extends AppCompatActivity {
         databaseRequestManager = new DatabaseRequestManager(this);
     }
 
+    /* AuthActivity отслеживает зачем сюда отправили пользователя, т.к. есть несколько сценариев:
+    * Он зарегистрировался;
+    * Пользователь удалил аккаунт;
+    * Пользователь вышел из аккаунта.
+    * */
     private void checkAuth(){
         if (getIntent().getBooleanExtra(REGISTERED, false)){
             Log.i(LOG_TAG, "REGISTERED");

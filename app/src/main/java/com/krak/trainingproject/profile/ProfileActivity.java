@@ -48,6 +48,7 @@ public class ProfileActivity extends AppCompatActivity {
         databaseRequestManager = new DatabaseRequestManager(this);
     }
 
+    // Загружаем текущие данные пользователя в EditText-ы
     private void addTextToInputs(){
         binding.nameTWProfile.setText(user.getName());
         if (!user.getImageSrc().equals("")){
@@ -58,22 +59,21 @@ public class ProfileActivity extends AppCompatActivity {
         binding.userEmailInputProfile.setText(user.getEmail());
     }
 
+    // Если такой емаил не существует у других пользователей, то сохраняем пользователя
+    // В ином случае показываем диалоговое окно
     private void save(){
         Log.i(LOG_TAG, "Updating user info");
-        ConsoleHelper.printUserInfo();
         if (!databaseRequestManager.existUser(binding.userEmailInputProfile.getText().toString())) {
             user.setEmail(binding.userEmailInputProfile.getText().toString());
             user.setName(binding.userNameInputProfile.getText().toString());
             user.setPassword(binding.userPasswordInputProfile.getText().toString());
             Log.i(LOG_TAG, "User info updated");
             databaseRequestManager.updateUserInfo();
-            ConsoleHelper.printUserInfo();
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         } else {
             showUserExistsDialog();
         }
-        binding.nameTWProfile2.setText(user.getName());
     }
 
     private void showUserExistsDialog() {
